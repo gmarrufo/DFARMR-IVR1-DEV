@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.validation.milk.ats.com" xmlns:impl="http://service.validation.milk.ats.com" xmlns:intf="http://service.validation.milk.ats.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://service.validation.milk.ats.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="doesProducerExistResponse">
+    <complexType>
+     <sequence>
+      <element name="doesProducerExistReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="doesProducerExist">
+    <complexType>
+     <sequence>
+      <element name="divisionNumber" nillable="true" type="xsd:string"/>
+      <element name="producerNumber" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="doesProducerExistResponse">
+     <wsdl:part element="impl:doesProducerExistResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="doesProducerExistRequest">
+     <wsdl:part element="impl:doesProducerExist" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="ProducerValidation">
+     <wsdl:operation name="doesProducerExist">
+       <wsdl:input message="impl:doesProducerExistRequest" name="doesProducerExistRequest"/>
+
+       <wsdl:output message="impl:doesProducerExistResponse" name="doesProducerExistResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="ProducerValidationSoapBinding" type="impl:ProducerValidation">
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="doesProducerExist">
+       <wsdlsoap:operation soapAction=""/>
+
+       <wsdl:input name="doesProducerExistRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="doesProducerExistResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="ProducerValidationService">
+     <wsdl:port binding="impl:ProducerValidationSoapBinding" name="ProducerValidation">
+       <wsdlsoap:address location="http://milkservicestest.dfamilk.com/webapp/milkws/services/ProducerValidation"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

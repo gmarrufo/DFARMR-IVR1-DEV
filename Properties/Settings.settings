@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DFARMR_IVR1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DFARMR_IVR1_NewGetTestResults_WebReference_Z_WS_GET_TEST_RESULTSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DFARMR_IVR1_GET_DIV_PAYEE_DETAILS_Z_WS_GET_DIV_PAYEE_DETAILSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DFARMR_IVR1_DOES_PASSWORD_EXIST_Z_WS_DOES_PASSWORD_EXIST_MSAService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DFARMR_IVR1_GET_QUERY_VIEW_DATA_RRW3_GET_QUERY_VIEW_DATAService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DFARMR_IVR1_NewDoesDivisionExist_WebReference_Z_WS_DOES_DIVISION_EXISTService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DFARMR_IVR1_NewDoesPasswordExist_WebReference_Z_WS_DOES_PASSWORD_EXISTService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DFARMR_IVR1_NewDoesProducerExist_WebReference_Z_WS_DOES_PRODUCER_EXISTService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

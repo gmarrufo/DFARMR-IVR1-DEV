@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s0="urn:sap-com:document:sap:rfc:functions" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="Z_WS_GET_DIV_PAYEE_DETAILS">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element minOccurs="0" name="I_LOGINID">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="I_MSA">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="7" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="I_PAYEE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="8" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Z_WS_GET_DIV_PAYEE_DETAILS.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="E_DIV_PAYEE">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="s0:ZDIV_PAYEE_DETAILS" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="E_STATUS">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ZDIV_PAYEE_DETAILS">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="DIVISION">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="DIV_NAME">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="40" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="PAYEE">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="PAYEE_NAME">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="40" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="Z_WS_GET_DIV_PAYEE_DETAILSInput">
+    <part name="parameters" element="s0:Z_WS_GET_DIV_PAYEE_DETAILS" />
+  </message>
+  <message name="Z_WS_GET_DIV_PAYEE_DETAILSOutput">
+    <part name="parameters" element="s0:Z_WS_GET_DIV_PAYEE_DETAILS.Response" />
+  </message>
+  <portType name="Z_WS_GET_DIV_PAYEE_DETAILSPortType">
+    <operation name="Z_WS_GET_DIV_PAYEE_DETAILS">
+      <input message="s0:Z_WS_GET_DIV_PAYEE_DETAILSInput" />
+      <output message="s0:Z_WS_GET_DIV_PAYEE_DETAILSOutput" />
+    </operation>
+  </portType>
+  <binding name="Z_WS_GET_DIV_PAYEE_DETAILSBinding" type="s0:Z_WS_GET_DIV_PAYEE_DETAILSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Z_WS_GET_DIV_PAYEE_DETAILS">
+      <soap:operation soapAction="http://www.sap.com/Z_WS_GET_DIV_PAYEE_DETAILS" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Z_WS_GET_DIV_PAYEE_DETAILSService">
+    <documentation>SAP Service Z_WS_GET_DIV_PAYEE_DETAILS via SOAP</documentation>
+    <port name="Z_WS_GET_DIV_PAYEE_DETAILSPortType" binding="s0:Z_WS_GET_DIV_PAYEE_DETAILSBinding">
+      <soap:address location="http://" />
+    </port>
+  </service>
+</definitions>

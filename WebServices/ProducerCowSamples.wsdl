@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.test.milk.ats.com" xmlns:impl="http://service.test.milk.ats.com" xmlns:intf="http://service.test.milk.ats.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://service.test.milk.ats.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="retrieveProducerCowSamplesResponse">
+    <complexType>
+     <sequence>
+      <element name="retrieveProducerCowSamplesReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="retrieveProducerCowSamples">
+    <complexType>
+     <sequence>
+      <element name="periodType" nillable="true" type="xsd:string"/>
+      <element name="divisionNumber" nillable="true" type="xsd:string"/>
+      <element name="producerNumber" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="retrieveProducerCowSamplesRequest">
+     <wsdl:part element="impl:retrieveProducerCowSamples" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="retrieveProducerCowSamplesResponse">
+     <wsdl:part element="impl:retrieveProducerCowSamplesResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="ProducerCowSamples">
+     <wsdl:operation name="retrieveProducerCowSamples">
+       <wsdl:input message="impl:retrieveProducerCowSamplesRequest" name="retrieveProducerCowSamplesRequest"/>
+
+       <wsdl:output message="impl:retrieveProducerCowSamplesResponse" name="retrieveProducerCowSamplesResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="ProducerCowSamplesSoapBinding" type="impl:ProducerCowSamples">
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="retrieveProducerCowSamples">
+       <wsdlsoap:operation soapAction=""/>
+
+       <wsdl:input name="retrieveProducerCowSamplesRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="retrieveProducerCowSamplesResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="ProducerCowSamplesService">
+     <wsdl:port binding="impl:ProducerCowSamplesSoapBinding" name="ProducerCowSamples">
+       <wsdlsoap:address location="http://milkservicestest.dfamilk.com/webapp/milkws/services/ProducerCowSamples"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

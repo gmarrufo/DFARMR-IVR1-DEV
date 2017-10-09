@@ -1,0 +1,10 @@
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\bin\DFARMR-IVR1.dll.config
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\bin\DFARMR-IVR1.dll
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\bin\DFARMR-IVR1.XmlSerializers.dll
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\bin\DFARMR-IVR1.pdb
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\bin\GVP.MCL.dll
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\bin\Microsoft.Web.Services3.dll
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\obj\Release\DFARMR-IVR1.dll
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\obj\Release\DFARMR-IVR1.pdb
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\obj\Release\DFARMR-IVR1.XmlSerializers.dll
+M:\Projects\DFARMR-IVR1\DFARMR-IVR1-DEV\obj\Release\DFARMR-IVR1.csprojResolveAssemblyReference.cache

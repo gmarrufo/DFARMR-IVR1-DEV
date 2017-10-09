@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>M:\PublishedProjects\DFARMR-IVR1</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/DFARMR-IVR1.dll">
+      <publishTime>08/30/2017 16:46:02</publishTime>
+    </File>
+    <File Include="bin/DFARMR-IVR1.pdb">
+      <publishTime>02/21/2017 11:17:58</publishTime>
+    </File>
+    <File Include="bin/DFARMR-IVR1.XmlSerializers.dll">
+      <publishTime>08/30/2017 16:34:40</publishTime>
+    </File>
+    <File Include="bin/GVP.MCL.dll">
+      <publishTime>08/15/2016 19:30:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Services3.dll">
+      <publishTime>02/09/2017 15:57:00</publishTime>
+    </File>
+    <File Include="dialogs/CollectPin.aspx">
+      <publishTime>02/21/2017 17:06:57</publishTime>
+    </File>
+    <File Include="dialogs/ComponentOrQuality.aspx">
+      <publishTime>02/21/2017 17:06:57</publishTime>
+    </File>
+    <File Include="dialogs/ComponentOrQualityColumns.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/ComponentOrQualityPlayback.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/CowSamples.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/DeleteLater.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/ExpandedMenu.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/ExpandedWebServiceLookup.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/FastResults.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/GetDivisionAlphaNum.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/GetDivisionNumber.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/GetMonth.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/GetPassword.aspx">
+      <publishTime>02/21/2017 17:06:58</publishTime>
+    </File>
+    <File Include="dialogs/GetProducerNumber.aspx">
+      <publishTime>02/21/2017 17:06:59</publishTime>
+    </File>
+    <File Include="dialogs/GlobalError.aspx">
+      <publishTime>03/22/2017 08:10:00</publishTime>
+    </File>
+    <File Include="dialogs/Goodbye.aspx">
+      <publishTime>02/21/2017 17:06:59</publishTime>
+    </File>
+    <File Include="dialogs/Intro.aspx">
+      <publishTime>02/22/2017 07:20:26</publishTime>
+    </File>
+    <File Include="dialogs/MainMenu.aspx">
+      <publishTime>02/21/2017 17:06:59</publishTime>
+    </File>
+    <File Include="dialogs/MarketReport.aspx">
+      <publishTime>03/23/2017 13:52:04</publishTime>
+    </File>
+    <File Include="dialogs/MorePaymentsMenu.aspx">
+      <publishTime>03/23/2017 13:43:11</publishTime>
+    </File>
+    <File Include="dialogs/MultipleDivisionsMenu.aspx">
+      <publishTime>02/21/2017 17:06:59</publishTime>
+    </File>
+    <File Include="dialogs/NoPinMenu.aspx">
+      <publishTime>02/21/2017 17:06:59</publishTime>
+    </File>
+    <File Include="dialogs/SelectPayeeMenu1.aspx">
+      <publishTime>03/23/2017 13:44:34</publishTime>
+    </File>
+    <File Include="dialogs/SelectPayeeMenu2.aspx">
+      <publishTime>02/21/2017 17:06:59</publishTime>
+    </File>
+    <File Include="dialogs/SystemError.aspx">
+      <publishTime>02/21/2017 17:07:00</publishTime>
+    </File>
+    <File Include="dialogs/Testing.aspx">
+      <publishTime>02/21/2017 17:07:00</publishTime>
+    </File>
+    <File Include="dialogs/TriesExceeded.aspx">
+      <publishTime>02/21/2017 17:07:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/21/2017 16:42:18</publishTime>
+    </File>
+    <File Include="globalError.aspx">
+      <publishTime>01/18/2017 17:51:58</publishTime>
+    </File>
+    <File Include="hold.aspx">
+      <publishTime>01/18/2017 17:51:58</publishTime>
+    </File>
+    <File Include="Libraries/MCL/Merged/GVP.MCL.dll">
+      <publishTime>08/15/2016 19:30:49</publishTime>
+    </File>
+    <File Include="Libraries/Microsoft.Web.Services3.dll">
+      <publishTime>02/09/2017 15:57:00</publishTime>
+    </File>
+    <File Include="MediaFiles/DairyFarmers/DFARMR/SystemData/DTMFtoALPHA.txt">
+      <publishTime>08/03/2016 11:32:37</publishTime>
+    </File>
+    <File Include="MediaFiles/DairyFarmers/MemberInfoLine/SystemData/DTMFtoALPHA.txt">
+      <publishTime>08/03/2016 11:32:37</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/2digitMonthStarDTMF.grxml">
+      <publishTime>06/01/2017 14:10:50</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/CollectPin_Dtmf.grxml">
+      <publishTime>02/18/2017 12:12:55</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/digitsStarDTMF.grxml">
+      <publishTime>06/01/2017 13:47:10</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/GetDivisionAlphaNum_Dtmf.grxml">
+      <publishTime>06/03/2016 10:45:34</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/GetDivisionNumber_Dtmf.grxml">
+      <publishTime>02/24/2017 11:24:03</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/GetMonth_Dtmf.grxml">
+      <publishTime>05/20/2016 10:25:44</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/GetPassword_Dtmf.grxml">
+      <publishTime>05/20/2016 10:25:44</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/GetProducerNumber_Dtmf.grxml">
+      <publishTime>05/20/2016 10:25:44</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/MDM_Dtmf.grxml">
+      <publishTime>06/20/2016 12:53:10</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/MorePaymentsMenu_Dtmf.grxml">
+      <publishTime>02/18/2017 12:18:28</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/NoPinMenu_Dtmf.grxml">
+      <publishTime>02/18/2017 12:20:08</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/SelectPayeeMenu1_Dtmf.grxml">
+      <publishTime>02/18/2017 12:18:28</publishTime>
+    </File>
+    <File Include="MediaFiles/grammars/en/SelectPayeeMenu2_Dtmf.grxml">
+      <publishTime>02/18/2017 12:18:28</publishTime>
+    </File>
+    <File Include="MediaFiles/SystemPrompts/marketReport.wav">
+      <publishTime>05/20/2016 10:25:44</publishTime>
+    </File>
+    <File Include="MediaFiles/SystemPrompts/silence.wav">
+      <publishTime>05/20/2016 10:25:44</publishTime>
+    </File>
+    <File Include="MediaFiles/SystemPrompts/SystemError_Msg.wav">
+      <publishTime>06/01/2017 12:22:33</publishTime>
+    </File>
+    <File Include="MediaFiles/voiceFiles/en/marketReport.wav">
+      <publishTime>05/20/2016 10:25:44</publishTime>
+    </File>
+    <File Include="MediaFiles/voiceFiles/en/silence.wav">
+      <publishTime>05/20/2016 10:25:44</publishTime>
+    </File>
+    <File Include="Service References/GetDivPayeeDetails/DFARMR_IVR1.GetDivPayeeDetails.ZDIV_PAYEE_DETAILS.datasource">
+      <publishTime>03/17/2017 08:16:34</publishTime>
+    </File>
+    <File Include="Service References/GetDivPayeeDetails/DFARMR_IVR1.GetDivPayeeDetails.Z_WS_GET_DIV_PAYEE_DETAILSResponse.datasource">
+      <publishTime>03/17/2017 08:16:34</publishTime>
+    </File>
+    <File Include="Service References/GetQueryViewData/DFARMR_IVR1.GetQueryViewData.RRW3_GET_QUERY_VIEW_DATAResponse.datasource">
+      <publishTime>03/15/2017 09:10:14</publishTime>
+    </File>
+    <File Include="Service References/GetQueryViewData/DFARMR_IVR1.GetQueryViewData.RRWS_SX_AXIS_DATA.datasource">
+      <publishTime>03/15/2017 09:10:14</publishTime>
+    </File>
+    <File Include="Service References/GetQueryViewData/DFARMR_IVR1.GetQueryViewData.RRWS_SX_AXIS_INFO.datasource">
+      <publishTime>03/15/2017 09:10:14</publishTime>
+    </File>
+    <File Include="Service References/GetQueryViewData/DFARMR_IVR1.GetQueryViewData.RRWS_S_CELL.datasource">
+      <publishTime>03/15/2017 09:10:14</publishTime>
+    </File>
+    <File Include="Service References/GetQueryViewData/DFARMR_IVR1.GetQueryViewData.RRWS_S_TEXT_SYMBOLS.datasource">
+      <publishTime>03/15/2017 09:10:13</publishTime>
+    </File>
+    <File Include="start.aspx">
+      <publishTime>01/18/2017 17:51:58</publishTime>
+    </File>
+    <File Include="Web References/DOES_PASSWORD_EXIST/Reference.map">
+      <publishTime>08/30/2017 15:45:59</publishTime>
+    </File>
+    <File Include="Web References/GET_DIV_PAYEE_DETAILS/Reference.map">
+      <publishTime>08/30/2017 15:45:59</publishTime>
+    </File>
+    <File Include="Web References/GET_DIV_PAYEE_DETAILS/ZDIV_PAYEE_DETAILS.datasource">
+      <publishTime>08/17/2017 14:07:32</publishTime>
+    </File>
+    <File Include="Web References/GET_QUERY_VIEW_DATA/Reference.map">
+      <publishTime>08/30/2017 15:45:59</publishTime>
+    </File>
+    <File Include="Web References/GET_QUERY_VIEW_DATA/RRWS_SX_AXIS_DATA.datasource">
+      <publishTime>08/17/2017 14:07:30</publishTime>
+    </File>
+    <File Include="Web References/GET_QUERY_VIEW_DATA/RRWS_SX_AXIS_INFO.datasource">
+      <publishTime>08/17/2017 14:07:30</publishTime>
+    </File>
+    <File Include="Web References/GET_QUERY_VIEW_DATA/RRWS_S_CELL.datasource">
+      <publishTime>08/17/2017 14:07:29</publishTime>
+    </File>
+    <File Include="Web References/GET_QUERY_VIEW_DATA/RRWS_S_TEXT_SYMBOLS.datasource">
+      <publishTime>08/17/2017 14:07:29</publishTime>
+    </File>
+    <File Include="Web References/NewDoesDivisionExist.WebReference/Reference.map">
+      <publishTime>08/30/2017 15:45:59</publishTime>
+    </File>
+    <File Include="Web References/NewDoesPasswordExist.WebReference/Reference.map">
+      <publishTime>08/30/2017 15:45:59</publishTime>
+    </File>
+    <File Include="Web References/NewDoesProducerExist.WebReference/Reference.map">
+      <publishTime>08/30/2017 15:45:59</publishTime>
+    </File>
+    <File Include="Web References/NewGetTestResults.WebReference/Reference.map">
+      <publishTime>08/30/2017 15:45:59</publishTime>
+    </File>
+    <File Include="Web References/NewGetTestResults.WebReference/ZMVRU_OUTPUT_NET.datasource">
+      <publishTime>08/17/2017 14:07:30</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/30/2017 15:58:40</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

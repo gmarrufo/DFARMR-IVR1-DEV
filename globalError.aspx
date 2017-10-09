@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="globalError" Codebehind="globalError.aspx.cs" %>

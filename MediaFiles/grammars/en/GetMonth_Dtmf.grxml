@@ -1,0 +1,69 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="GetMonthD" version="1.0" mode="dtmf">
+	<rule id="GetMonthD" scope="public">
+    		<one-of>
+      		<item>
+        			0 1
+        			<tag>MEANING="01"</tag>
+      		</item>
+
+      		<item>
+        			0 2
+        			<tag>MEANING="02"</tag>
+      		</item>
+
+      		<item>
+        			0 3
+        			<tag>MEANING="03"</tag>
+      		</item>
+
+      		<item>
+        			0 4
+       			<tag>MEANING="04"</tag>
+      		</item>
+
+      		<item>
+        			0 5
+        			<tag>MEANING="05"</tag>
+      		</item>
+
+      		<item>
+        			0 6
+        			<tag>MEANING="06"</tag>
+      		</item>
+
+      		<item>
+        			0 7
+        			<tag>MEANING="07"</tag>
+      		</item>
+
+      		<item>
+        			0 8
+        			<tag>MEANING="08"</tag>
+      		</item>
+
+      		<item>
+        			0 9
+        			<tag>MEANING="09"</tag>
+      		</item>
+
+      		<item>
+        			1 0
+        			<tag>MEANING="10"</tag>
+      		</item>
+
+      		<item>
+        			1 1
+        			<tag>MEANING="11"</tag>
+      		</item>
+
+      		<item>
+        			1 2
+        			<tag>MEANING="12"</tag>
+      		</item>
+			<item>
+				*
+			</item>
+    		</one-of>
+	</rule>
+</grammar>

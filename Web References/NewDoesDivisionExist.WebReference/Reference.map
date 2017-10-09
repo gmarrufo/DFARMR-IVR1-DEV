@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http:///wsdl?services=Z_WS_DOES_DIVISION_EXIST&amp;sap-client=100" filename="wsdl.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s0="urn:sap-com:document:sap:rfc:functions" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="Z_WS_GET_TEST_RESULTS">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="I_DIVISION">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="I_ENDDT" type="s0:date" />
+            <xsd:element name="I_PRODUCER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="I_REPORTID">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="I_STARTDT" type="s0:date" />
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Z_WS_GET_TEST_RESULTS.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="E_STATUS">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="E_TESTRESULTS">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="s0:ZMVRU_OUTPUT_NET" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ZMVRU_FIELD_LINE_NET">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="FIELD" type="s0:ZMVRU_FIELD_TAB_NET" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZMVRU_FIELD_TAB_NET">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CATEGORY" type="xsd:string" />
+          <xsd:element minOccurs="0" name="NAME" type="xsd:string" />
+          <xsd:element minOccurs="0" name="VALUE" type="xsd:string" />
+          <xsd:element minOccurs="0" name="TESTDESC" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZMVRU_OUTPUT_NET">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="PICKUP" type="s0:ZMVRU_TEST_NET" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZMVRU_TEST_NET">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="s0:ZMVRU_FIELD_LINE_NET" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="date">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+          <xsd:pattern value="....-..-.." />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+  </types>
+  <message name="Z_WS_GET_TEST_RESULTSInput">
+    <part name="parameters" element="s0:Z_WS_GET_TEST_RESULTS" />
+  </message>
+  <message name="Z_WS_GET_TEST_RESULTSOutput">
+    <part name="parameters" element="s0:Z_WS_GET_TEST_RESULTS.Response" />
+  </message>
+  <portType name="Z_WS_GET_TEST_RESULTSPortType">
+    <operation name="Z_WS_GET_TEST_RESULTS">
+      <input message="s0:Z_WS_GET_TEST_RESULTSInput" />
+      <output message="s0:Z_WS_GET_TEST_RESULTSOutput" />
+    </operation>
+  </portType>
+  <binding name="Z_WS_GET_TEST_RESULTSBinding" type="s0:Z_WS_GET_TEST_RESULTSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Z_WS_GET_TEST_RESULTS">
+      <soap:operation soapAction="http://www.sap.com/Z_WS_GET_TEST_RESULTS" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Z_WS_GET_TEST_RESULTSService">
+    <documentation>SAP Service Z_WS_GET_TEST_RESULTS via SOAP</documentation>
+    <port name="Z_WS_GET_TEST_RESULTSPortType" binding="s0:Z_WS_GET_TEST_RESULTSBinding">
+      <soap:address location="http://" />
+    </port>
+  </service>
+</definitions>

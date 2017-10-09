@@ -1,0 +1,78 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="GetProducerNumberD" version="1.0" mode="dtmf">
+	<rule id="GetProducerNumberD" scope="public">	
+		<item>
+			<ruleref uri="#ProducerNumberD"/>				
+			<tag>tag=ProducerNumberD.NUM</tag>
+		</item>				
+	</rule>
+
+	<rule id="ProducerNumberD" scope="public">
+		<item>
+			<ruleref uri="#DigitD"/>
+			<tag>NUM=DigitD.MEANING</tag>	
+		</item>
+		<item repeat="0-5">
+			<ruleref uri="#DigitD"/>
+			<tag>NUM=NUM+DigitD.MEANING</tag>	
+		</item>
+		<item repeat="0-1">
+			#
+		</item>
+	</rule>
+
+	<rule id="DigitD" scope="public">
+		<!-- A number from 0-9 -->
+    		<one-of>
+      		<item>
+        			0
+        			<tag>MEANING="0"</tag>
+      		</item>
+
+      		<item>
+        			1
+        			<tag>MEANING="1"</tag>
+      		</item>
+
+      		<item>
+        			2
+        			<tag>MEANING="2"</tag>
+      		</item>
+
+      		<item>
+        			3
+        			<tag>MEANING="3"</tag>
+      		</item>
+
+      		<item>
+        			4
+       			<tag>MEANING="4"</tag>
+      		</item>
+
+      		<item>
+        			5
+        			<tag>MEANING="5"</tag>
+      		</item>
+
+      		<item>
+        			6
+        			<tag>MEANING="6"</tag>
+      		</item>
+
+      		<item>
+        			7
+        			<tag>MEANING="7"</tag>
+      		</item>
+
+      		<item>
+        			8
+        			<tag>MEANING="8"</tag>
+      		</item>
+
+      		<item>
+        			9
+        			<tag>MEANING="9"</tag>
+      		</item>
+    		</one-of>
+	</rule>
+</grammar>

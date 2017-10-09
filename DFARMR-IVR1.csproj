@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECF34369-0556-4045-B2FE-2651B4EF4C6B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DFARMR_IVR1</RootNamespace>
+    <AssemblyName>DFARMR-IVR1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GVP.MCL, Version=1.0.5947.24978, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\MCL\Merged\GVP.MCL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dialogs\CollectPin.aspx" />
+    <Content Include="dialogs\MorePaymentsMenu.aspx" />
+    <Content Include="dialogs\NoPinMenu.aspx" />
+    <Content Include="dialogs\SelectPayeeMenu1.aspx" />
+    <Content Include="dialogs\SelectPayeeMenu2.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Libraries\Microsoft.Web.Services3.dll" />
+    <Content Include="MediaFiles\DairyFarmers\DFARMR\SystemData\DTMFtoALPHA.txt" />
+    <Content Include="MediaFiles\grammars\en\GetDivisionAlphaNum_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\GetDivisionNumber_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\GetMonth_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\GetPassword_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\GetProducerNumber_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\MDM_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\CollectPin_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\MorePaymentsMenu_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\NoPinMenu_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\SelectPayeeMenu1_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\SelectPayeeMenu2_Dtmf.grxml" />
+    <Content Include="MediaFiles\grammars\en\digitsStarDTMF.grxml" />
+    <Content Include="MediaFiles\grammars\en\2digitMonthStarDTMF.grxml" />
+    <None Include="Properties\PublishProfiles\DFARMR-IVR1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\local test.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="MediaFiles\SystemPrompts\marketReport.wav" />
+    <Content Include="MediaFiles\SystemPrompts\silence.wav" />
+    <Content Include="MediaFiles\SystemPrompts\SystemError_Msg.wav" />
+    <Content Include="MediaFiles\voiceFiles\en\marketReport.wav" />
+    <Content Include="MediaFiles\voiceFiles\en\silence.wav" />
+    <Content Include="Service References\GetDivPayeeDetails\DFARMR_IVR1.GetDivPayeeDetails.ZDIV_PAYEE_DETAILS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetDivPayeeDetails\DFARMR_IVR1.GetDivPayeeDetails.Z_WS_GET_DIV_PAYEE_DETAILSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GetDivPayeeDetails\get_div_payee_details.wsdl" />
+    <None Include="Service References\GetQueryViewData\configuration91.svcinfo" />
+    <None Include="Service References\GetQueryViewData\configuration.svcinfo" />
+    <None Include="Service References\GetDivPayeeDetails\configuration91.svcinfo" />
+    <None Include="Service References\GetDivPayeeDetails\configuration.svcinfo" />
+    <None Include="Service References\GetDivPayeeDetails\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\GetQueryViewData\DFARMR_IVR1.GetQueryViewData.RRW3_GET_QUERY_VIEW_DATAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetQueryViewData\DFARMR_IVR1.GetQueryViewData.RRWS_SX_AXIS_DATA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetQueryViewData\DFARMR_IVR1.GetQueryViewData.RRWS_SX_AXIS_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetQueryViewData\DFARMR_IVR1.GetQueryViewData.RRWS_S_CELL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetQueryViewData\DFARMR_IVR1.GetQueryViewData.RRWS_S_TEXT_SYMBOLS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GetQueryViewData\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\NewDoesDivisionExist.WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\GET_DIV_PAYEE_DETAILS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\DOES_PASSWORD_EXIST\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Service References\GetQueryViewData\df.wsdl" />
+    <None Include="Web References\DOES_PASSWORD_EXIST\wsdl.wsdl" />
+    <None Include="Web References\GET_DIV_PAYEE_DETAILS\wsdl.wsdl" />
+    <Content Include="Web References\GET_DIV_PAYEE_DETAILS\ZDIV_PAYEE_DETAILS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\GET_QUERY_VIEW_DATA\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\GET_QUERY_VIEW_DATA\RRWS_SX_AXIS_DATA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\GET_QUERY_VIEW_DATA\RRWS_SX_AXIS_INFO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\GET_QUERY_VIEW_DATA\RRWS_S_CELL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\GET_QUERY_VIEW_DATA\RRWS_S_TEXT_SYMBOLS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\GET_QUERY_VIEW_DATA\wsdl.wsdl" />
+    <None Include="Web References\NewDoesDivisionExist.WebReference\wsdl.wsdl" />
+    <Content Include="Web References\NewDoesPasswordExist.WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\NewDoesPasswordExist.WebReference\wsdl.wsdl" />
+    <Content Include="Web References\NewDoesProducerExist.WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\NewDoesProducerExist.WebReference\wsdl.wsdl" />
+    <Content Include="Web References\NewGetTestResults.WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\NewGetTestResults.WebReference\wsdl.wsdl" />
+    <Content Include="Web References\NewGetTestResults.WebReference\ZMVRU_OUTPUT_NET.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="WebServices\DivisionValidation.wsdl" />
+    <None Include="WebServices\ProducerCowSamples.wsdl" />
+    <None Include="WebServices\ProducerPasswordValidation.wsdl" />
+    <None Include="WebServices\ProducerValidation.wsdl" />
+    <None Include="WebServices\ProducerWeightsAndTests.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dialogs\ComponentOrQuality.aspx" />
+    <Content Include="dialogs\ComponentOrQualityColumns.aspx" />
+    <Content Include="dialogs\ComponentOrQualityPlayback.aspx" />
+    <Content Include="dialogs\CowSamples.aspx" />
+    <Content Include="dialogs\ExpandedMenu.aspx" />
+    <Content Include="dialogs\ExpandedWebServiceLookup.aspx" />
+    <Content Include="dialogs\FastResults.aspx" />
+    <Content Include="dialogs\GetDivisionAlphaNum.aspx" />
+    <Content Include="dialogs\GetDivisionNumber.aspx" />
+    <Content Include="dialogs\GetMonth.aspx" />
+    <Content Include="dialogs\GetPassword.aspx" />
+    <Content Include="dialogs\GetProducerNumber.aspx" />
+    <Content Include="dialogs\GlobalError.aspx" />
+    <Content Include="dialogs\Goodbye.aspx" />
+    <Content Include="dialogs\Intro.aspx" />
+    <Content Include="dialogs\MainMenu.aspx" />
+    <Content Include="dialogs\MarketReport.aspx" />
+    <Content Include="dialogs\MultipleDivisionsMenu.aspx" />
+    <Content Include="dialogs\SystemError.aspx" />
+    <Content Include="dialogs\Testing.aspx" />
+    <Content Include="dialogs\TriesExceeded.aspx" />
+    <Content Include="globalError.aspx" />
+    <Content Include="hold.aspx" />
+    <Content Include="Libraries\MCL\Merged\GVP.MCL.dll" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baseClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\CollectPin.aspx.cs">
+      <DependentUpon>CollectPin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\CollectPin.aspx.designer.cs">
+      <DependentUpon>CollectPin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\ComponentOrQuality.aspx.cs">
+      <DependentUpon>ComponentOrQuality.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\ComponentOrQualityColumns.aspx.cs">
+      <DependentUpon>ComponentOrQualityColumns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\ComponentOrQualityPlayback.aspx.cs">
+      <DependentUpon>ComponentOrQualityPlayback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\CowSamples.aspx.cs">
+      <DependentUpon>CowSamples.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\ExpandedMenu.aspx.cs">
+      <DependentUpon>ExpandedMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\ExpandedWebServiceLookup.aspx.cs">
+      <DependentUpon>ExpandedWebServiceLookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\FastResults.aspx.cs">
+      <DependentUpon>FastResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\GetDivisionAlphaNum.aspx.cs">
+      <DependentUpon>GetDivisionAlphaNum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\GetDivisionNumber.aspx.cs">
+      <DependentUpon>GetDivisionNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\GetMonth.aspx.cs">
+      <DependentUpon>GetMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\GetPassword.aspx.cs">
+      <DependentUpon>GetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\GetProducerNumber.aspx.cs">
+      <DependentUpon>GetProducerNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\GlobalError.aspx.cs">
+      <DependentUpon>GlobalError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\Goodbye.aspx.cs">
+      <DependentUpon>Goodbye.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\Intro.aspx.cs">
+      <DependentUpon>Intro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\MarketReport.aspx.cs">
+      <DependentUpon>MarketReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\MorePaymentsMenu.aspx.cs">
+      <DependentUpon>MorePaymentsMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\MorePaymentsMenu.aspx.designer.cs">
+      <DependentUpon>MorePaymentsMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\MultipleDivisionsMenu.aspx.cs">
+      <DependentUpon>MultipleDivisionsMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\NoPinMenu.aspx.cs">
+      <DependentUpon>NoPinMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\NoPinMenu.aspx.designer.cs">
+      <DependentUpon>NoPinMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\SelectPayeeMenu1.aspx.cs">
+      <DependentUpon>SelectPayeeMenu1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\SelectPayeeMenu1.aspx.designer.cs">
+      <DependentUpon>SelectPayeeMenu1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\SelectPayeeMenu2.aspx.cs">
+      <DependentUpon>SelectPayeeMenu2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\SelectPayeeMenu2.aspx.designer.cs">
+      <DependentUpon>SelectPayeeMenu2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\SystemError.aspx.cs">
+      <DependentUpon>SystemError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\Testing.aspx.cs">
+      <DependentUpon>Testing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogs\TriesExceeded.aspx.cs">
+      <DependentUpon>TriesExceeded.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="globalError.aspx.cs">
+      <DependentUpon>globalError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="globalError.aspx.designer.cs">
+      <DependentUpon>globalError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="hold.aspx.cs">
+      <DependentUpon>hold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hold.aspx.designer.cs">
+      <DependentUpon>hold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetDivPayeeDetails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetQueryViewData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="utils\BaseDialog.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="utils\GetPasswordXML.cs" />
+    <Compile Include="utils\GetPayeeXML.cs" />
+    <Compile Include="utils\GetPaymentsXML.cs" />
+    <Compile Include="utils\Log.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="utils\WebServiceResult.cs" />
+    <Compile Include="Web References\DOES_PASSWORD_EXIST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GET_DIV_PAYEE_DETAILS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GET_QUERY_VIEW_DATA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NewDoesDivisionExist.WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NewDoesPasswordExist.WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NewDoesProducerExist.WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NewGetTestResults.WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\DerivedDivisionValidationService.cs" />
+    <Compile Include="WebServices\DerivedProducerCowSamplesService.cs" />
+    <Compile Include="WebServices\DerivedProducerPasswordValidationService.cs" />
+    <Compile Include="WebServices\DerivedProducerValidationService.cs" />
+    <Compile Include="WebServices\DerivedProducerWeightsAndTestsService.cs" />
+    <Compile Include="WebServices\DivisionValidationService.cs" />
+    <Compile Include="WebServices\ProducerCowSamplesService.cs" />
+    <Compile Include="WebServices\ProducerPasswordValidationService.cs" />
+    <Compile Include="WebServices\ProducerValidationService.cs" />
+    <Compile Include="WebServices\ProducerWeightsAndTestsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MediaFiles\config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=RRW3_GET_QUERY_VIEW_DATA">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GET_QUERY_VIEW_DATA\</RelPath>
+      <UpdateFromURL>http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=RRW3_GET_QUERY_VIEW_DATA</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFARMR_IVR1_GET_QUERY_VIEW_DATA_RRW3_GET_QUERY_VIEW_DATAService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_DIVISION_EXIST&amp;sap-client=100">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NewDoesDivisionExist.WebReference\</RelPath>
+      <UpdateFromURL>http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_DIVISION_EXIST&amp;sap-client=100</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFARMR_IVR1_NewDoesDivisionExist_WebReference_Z_WS_DOES_DIVISION_EXISTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_PASSWORD_EXIST&amp;sap-client=100">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NewDoesPasswordExist.WebReference\</RelPath>
+      <UpdateFromURL>http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_PASSWORD_EXIST&amp;sap-client=100</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFARMR_IVR1_NewDoesPasswordExist_WebReference_Z_WS_DOES_PASSWORD_EXISTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_PASSWORD_EXIST_MSA">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DOES_PASSWORD_EXIST\</RelPath>
+      <UpdateFromURL>http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_PASSWORD_EXIST_MSA</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFARMR_IVR1_DOES_PASSWORD_EXIST_Z_WS_DOES_PASSWORD_EXIST_MSAService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_PRODUCER_EXIST&amp;sap-client=100">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NewDoesProducerExist.WebReference\</RelPath>
+      <UpdateFromURL>http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_DOES_PRODUCER_EXIST&amp;sap-client=100</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFARMR_IVR1_NewDoesProducerExist_WebReference_Z_WS_DOES_PRODUCER_EXISTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_GET_DIV_PAYEE_DETAILS">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GET_DIV_PAYEE_DETAILS\</RelPath>
+      <UpdateFromURL>http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_GET_DIV_PAYEE_DETAILS</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFARMR_IVR1_GET_DIV_PAYEE_DETAILS_Z_WS_GET_DIV_PAYEE_DETAILSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_GET_TEST_RESULTS&amp;sap-client=100">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NewGetTestResults.WebReference\</RelPath>
+      <UpdateFromURL>http://208.82.108.109:8000/sap/bc/soap/wsdl%3fservices=Z_WS_GET_TEST_RESULTS&amp;sap-client=100</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFARMR_IVR1_NewGetTestResults_WebReference_Z_WS_GET_TEST_RESULTSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GetDivPayeeDetails\" />
+    <WCFMetadataStorage Include="Service References\GetQueryViewData\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>13294</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:13294/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s0="urn:sap-com:document:sap:rfc:functions" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="Z_WS_DOES_PASSWORD_EXIST_MSA">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="I_DIVISION">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="I_PASSWORD" type="xsd:string" />
+            <xsd:element name="I_PRODUCER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Z_WS_DOES_PASSWORD_EXIST_MSA.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="E_MSA">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="7" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="E_PIN">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="4" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="E_STATUS">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="Z_WS_DOES_PASSWORD_EXIST_MSAInput">
+    <part name="parameters" element="s0:Z_WS_DOES_PASSWORD_EXIST_MSA" />
+  </message>
+  <message name="Z_WS_DOES_PASSWORD_EXIST_MSAOutput">
+    <part name="parameters" element="s0:Z_WS_DOES_PASSWORD_EXIST_MSA.Response" />
+  </message>
+  <portType name="Z_WS_DOES_PASSWORD_EXIST_MSAPortType">
+    <operation name="Z_WS_DOES_PASSWORD_EXIST_MSA">
+      <input message="s0:Z_WS_DOES_PASSWORD_EXIST_MSAInput" />
+      <output message="s0:Z_WS_DOES_PASSWORD_EXIST_MSAOutput" />
+    </operation>
+  </portType>
+  <binding name="Z_WS_DOES_PASSWORD_EXIST_MSABinding" type="s0:Z_WS_DOES_PASSWORD_EXIST_MSAPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Z_WS_DOES_PASSWORD_EXIST_MSA">
+      <soap:operation soapAction="http://www.sap.com/Z_WS_DOES_PASSWORD_EXIST_MSA" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Z_WS_DOES_PASSWORD_EXIST_MSAService">
+    <documentation>SAP Service Z_WS_DOES_PASSWORD_EXIST_MSA via SOAP</documentation>
+    <port name="Z_WS_DOES_PASSWORD_EXIST_MSAPortType" binding="s0:Z_WS_DOES_PASSWORD_EXIST_MSABinding">
+      <soap:address location="http://" />
+    </port>
+  </service>
+</definitions>

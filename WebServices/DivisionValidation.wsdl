@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.validation.milk.ats.com" xmlns:impl="http://service.validation.milk.ats.com" xmlns:intf="http://service.validation.milk.ats.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://service.validation.milk.ats.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <element name="doesDivisionExistResponse">
+    <complexType>
+     <sequence>
+      <element name="doesDivisionExistReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="doesDivisionExist">
+    <complexType>
+     <sequence>
+      <element name="divisionNumber" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="doesDivisionExistResponse">
+     <wsdl:part element="impl:doesDivisionExistResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="doesDivisionExistRequest">
+     <wsdl:part element="impl:doesDivisionExist" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="DivisionValidation">
+     <wsdl:operation name="doesDivisionExist">
+       <wsdl:input message="impl:doesDivisionExistRequest" name="doesDivisionExistRequest"/>
+
+       <wsdl:output message="impl:doesDivisionExistResponse" name="doesDivisionExistResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="DivisionValidationSoapBinding" type="impl:DivisionValidation">
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="doesDivisionExist">
+       <wsdlsoap:operation soapAction=""/>
+
+       <wsdl:input name="doesDivisionExistRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="doesDivisionExistResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="DivisionValidationService">
+     <wsdl:port binding="impl:DivisionValidationSoapBinding" name="DivisionValidation">
+       <wsdlsoap:address location="http://milkservicestest.dfamilk.com/webapp/milkws/services/DivisionValidation"/>
+
+     </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>
